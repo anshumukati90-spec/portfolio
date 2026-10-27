@@ -1,0 +1,228 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Anshu Mukati – AI & Data Science Portfolio</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:wght@500;700;800&family=IBM+Plex+Sans:wght@400;500&display=swap" rel="stylesheet">
+<style>
+:root{
+  --bg:#F2F5F9; --surface:#FFFFFF; --ink:#14202E; --muted:#5A6878; --line:#D5DCE5;
+  --accent:#2754E8; --accent-ink:#FFFFFF; --pitch:#17835A;
+  --display:'Bricolage Grotesque','Segoe UI',system-ui,sans-serif;
+  --body:'IBM Plex Sans','Segoe UI',system-ui,sans-serif;
+  box-sizing:border-box;
+  padding-top:env(safe-area-inset-top,0px); padding-bottom:env(safe-area-inset-bottom,0px);
+}
+@media (prefers-color-scheme: dark){
+  :root:not([data-theme="light"]){
+    --bg:#0D1520; --surface:#152130; --ink:#E7EDF5; --muted:#9AA9BA; --line:#26364A;
+    --accent:#7C9BFF; --accent-ink:#0D1520; --pitch:#4CC38A; color-scheme:dark;
+  }
+}
+:root[data-theme="dark"]{
+  --bg:#0D1520; --surface:#152130; --ink:#E7EDF5; --muted:#9AA9BA; --line:#26364A;
+  --accent:#7C9BFF; --accent-ink:#0D1520; --pitch:#4CC38A; color-scheme:dark;
+}
+html{scroll-padding-top:env(safe-area-inset-top,0px);scroll-behavior:smooth}
+*,*::before,*::after{box-sizing:border-box}
+body{margin:0;background:var(--bg);color:var(--ink);font:400 17px/1.6 var(--body)}
+a{color:inherit}
+:focus-visible{outline:3px solid var(--accent);outline-offset:3px;border-radius:4px}
+.wrap{max-width:1040px;margin:0 auto;padding:0 24px}
+header.top{display:flex;justify-content:space-between;align-items:center;padding:20px 0;gap:16px;flex-wrap:wrap}
+header.top strong{font:700 1.1rem var(--display)}
+nav{display:flex;gap:20px;align-items:center;flex-wrap:wrap}
+nav a{text-decoration:none;color:var(--muted);font-size:.95rem}
+nav a:hover{color:var(--ink)}
+.tbtn{background:none;border:1px solid var(--line);color:var(--ink);border-radius:999px;padding:5px 14px;font:inherit;font-size:.9rem;cursor:pointer}
+.hero{max-width:44em;padding:56px 0 72px}
+h1{font:800 clamp(2.6rem,6vw,4.4rem)/1.02 var(--display);letter-spacing:-.03em;margin:0 0 20px}
+.lede{font-size:1.15rem;color:var(--muted);max-width:34em;margin:0 0 28px}
+.cta{display:flex;gap:12px;flex-wrap:wrap;margin-bottom:28px}
+.btn{display:inline-block;padding:12px 22px;border-radius:10px;font-weight:500;text-decoration:none;border:1px solid var(--accent)}
+.btn.main{background:var(--accent);color:var(--accent-ink)}
+.btn.alt{color:var(--accent)}
+.links{display:flex;gap:18px;flex-wrap:wrap;font-size:.95rem}
+.links a{color:var(--muted)}
+section{padding:56px 0;border-top:1px solid var(--line)}
+h2{font:700 clamp(1.7rem,3.5vw,2.3rem)/1.15 var(--display);letter-spacing:-.02em;margin:0 0 28px}
+.about{max-width:42em}
+.about p{margin:0 0 16px}
+.feature{background:var(--surface);border:1px solid var(--line);border-radius:16px;padding:32px;margin-bottom:20px}
+.feature h3,.row h3{font:700 1.4rem var(--display);margin:0 0 6px}
+.tags{display:flex;gap:8px;flex-wrap:wrap;margin:12px 0 16px}
+.tags span{font-size:.85rem;padding:3px 12px;border-radius:999px;background:var(--bg);border:1px solid var(--line);color:var(--muted)}
+.feature ul,.row ul{margin:0 0 16px;padding-left:20px}
+.feature li,.row li{margin-bottom:8px}
+.stats{display:flex;gap:32px;flex-wrap:wrap;margin:20px 0}
+.stats b{display:block;font:800 1.7rem var(--display);color:var(--pitch)}
+.stats small{color:var(--muted)}
+.row{display:grid;grid-template-columns:1fr 1.6fr;gap:32px;padding:28px 0;border-top:1px solid var(--line)}
+.plink{font-weight:500;color:var(--accent);text-decoration:none}
+.plink:hover{text-decoration:underline}
+.skills{display:grid;grid-template-columns:repeat(auto-fit,minmax(230px,1fr));gap:28px}
+.skills h3{font:700 1.05rem var(--display);margin:0 0 8px;color:var(--pitch)}
+.skills p{margin:0;color:var(--muted)}
+.tl{list-style:none;margin:0;padding:0}
+.tl li{display:grid;grid-template-columns:150px 1fr;gap:20px;padding:14px 0;border-bottom:1px solid var(--line)}
+.tl .d{color:var(--muted);font-size:.92rem}
+.tl b{font-weight:500}
+.cols{display:grid;grid-template-columns:1fr 1fr;gap:48px}
+.contact{text-align:left}
+.contact .big{font:700 clamp(1.5rem,4vw,2.4rem) var(--display);word-break:break-word}
+footer{padding:32px 0;color:var(--muted);font-size:.9rem;border-top:1px solid var(--line)}
+@media (max-width:820px){
+  .row,.cols{grid-template-columns:1fr;gap:28px}
+  .tl li{grid-template-columns:1fr;gap:2px}
+}
+@media (prefers-reduced-motion:reduce){html{scroll-behavior:auto}}
+</style>
+</head>
+<body>
+<div class="wrap">
+  <header class="top">
+    <strong>Anshu Mukati</strong>
+    <nav aria-label="Sections">
+      <a href="#projects">Projects</a><a href="#skills">Skills</a><a href="#certs">Certifications</a><a href="#contact">Contact</a>
+      <button class="tbtn" id="tt" type="button" aria-label="Switch light or dark theme">Theme</button>
+    </nav>
+  </header>
+
+  <div class="hero">
+    <h1>I turn raw data into models people can use.</h1>
+    <p class="lede">Hi, I’m Anshu, a B.Tech AI & Data Science student (batch of 2028) from Ujjain. I’m looking for an internship in machine learning and data analysis.</p>
+    <div class="cta">
+      <a class="btn main" href="#projects">See my projects</a>
+      <a class="btn alt" href="mailto:anshumukati90@gmail.com">Email me</a>
+    </div>
+    <div class="links">
+      <a href="https://github.com/anshumukati90-spec" target="_blank" rel="noopener">GitHub</a>
+      <a href="https://leetcode.com/anshu_mukati_09" target="_blank" rel="noopener">LeetCode</a>
+      <a href="https://linkedin.com/in/anshu-mukati" target="_blank" rel="noopener">LinkedIn</a>
+    </div>
+  </div>
+
+  <section id="about">
+    <h2>About me</h2>
+    <div class="about">
+      <p>My projects cover the full data workflow in Python: cleaning raw data with Pandas, training scikit-learn models, and presenting the results in Power BI dashboards.</p>
+      <p>I also build full applications, such as a student management system with automated PDF reports and a notes-sharing platform with role-based access. I practise DSA in Java, work with SQL, and have AWS Academy training in Data Engineering and Cloud Foundations.</p>
+    </div>
+  </section>
+
+  <section id="projects">
+    <h2>Projects</h2>
+
+    <article class="feature">
+      <h3>FIFA World Cup Data: Real-Time Analysis</h3>
+      <div class="tags"><span>Python</span><span>Pandas</span><span>scikit-learn</span><span>Power BI</span></div>
+      <div class="stats">
+        <div><b>96.1%</b><small>R² of the model</small></div>
+        <div><b>18,979</b><small>player records</small></div>
+        <div><b>77</b><small>attributes</small></div>
+      </div>
+      <ul>
+        <li>Cleaned and prepared the dataset with a Python/Pandas ETL pipeline before any modeling started.</li>
+        <li>Trained a Random Forest Regression model that predicts a player’s Overall Rating.</li>
+        <li>Built a Power BI dashboard so value, potential, wage, and nationality trends can be explored in real time.</li>
+      </ul>
+      <a class="plink" href="https://github.com/anshumukati90-spec" target="_blank" rel="noopener">View on GitHub</a>
+    </article>
+
+    <div class="row">
+      <div>
+        <h3>NoteHub</h3>
+        <p style="margin:0;color:var(--muted)">Role-based notes sharing platform</p>
+        <div class="tags"><span>Role-based access</span><span>AI assistant</span></div>
+      </div>
+      <div>
+        <ul>
+          <li>Students can browse, upload, and download study notes. Separate Student, Author, and Admin roles control what each user can do.</li>
+          <li>An author dashboard shows how uploads are performing, and an AI assistant explains the content of a note on request.</li>
+        </ul>
+        <a class="plink" href="https://github.com/anshumukati90-spec" target="_blank" rel="noopener">View on GitHub</a>
+      </div>
+    </div>
+
+    <div class="row">
+      <div>
+        <h3>Student Management System</h3>
+        <p style="margin:0;color:var(--muted)">With data analysis</p>
+        <div class="tags"><span>Charts</span><span>PDF reports</span></div>
+      </div>
+      <div>
+        <ul>
+          <li>Went beyond record-keeping: charts make performance trends easy to spot at a glance instead of buried in a table.</li>
+          <li>Automated PDF report generation lets student records be exported and shared without manual formatting.</li>
+        </ul>
+        <a class="plink" href="https://github.com/anshumukati90-spec" target="_blank" rel="noopener">View on GitHub</a>
+      </div>
+    </div>
+  </section>
+
+  <section id="skills">
+    <h2>Skills</h2>
+    <div class="skills">
+      <div><h3>Languages</h3><p>C, C++, Java</p></div>
+      <div><h3>Data & ML</h3><p>NumPy, Pandas, scikit-learn, machine learning basics, prompt engineering, Power BI</p></div>
+      <div><h3>Database</h3><p>SQL</p></div>
+      <div><h3>Core CS</h3><p>Data structures and algorithms in Java, object-oriented programming, problem solving</p></div>
+      <div><h3>Hardware</h3><p>Basic hardware knowledge (Wiztron Club)</p></div>
+      <div><h3>Soft skills</h3><p>Leadership, teamwork, communication</p></div>
+    </div>
+  </section>
+
+  <section id="certs">
+    <h2>Certifications</h2>
+    <ul class="tl">
+      <li><span class="d">Sep 2026</span><span><b>AWS Academy Graduate: Data Engineering</b> (40 hours) <a class="plink" href="https://credly.com/go/GwgCIHp7" target="_blank" rel="noopener">Verify</a></span></li>
+      <li><span class="d">Sep 2026</span><span><b>AWS Academy Graduate: Cloud Foundations</b> (20 hours) <a class="plink" href="https://credly.com/go/eSgg3VZ7" target="_blank" rel="noopener">Verify</a></span></li>
+      <li><span class="d">Aug 2026</span><span><b>CypherVerse Hackathon 2026</b>, participation. DevHive Club, CGC University, Mohali</span></li>
+      <li><span class="d">Workshop</span><span><b>Internet of Things (IoT)</b>, Chandigarh Engineering College with Pantech E-Learning</span></li>
+      <li><span class="d">2016</span><span><b>11th MP State Level UCMAS Abacus and Mental Arithmetic Competition</b>, consolation prize</span></li>
+    </ul>
+  </section>
+
+  <section id="experience">
+    <div class="cols">
+      <div>
+        <h2>Experience</h2>
+        <ul class="tl">
+          <li><span class="d">1 year</span><span><b>Volunteer, Tech Fest</b><br>Coordinated event logistics with a cross-functional team, often handling several tasks against tight deadlines.</span></li>
+          <li><span class="d">Member</span><span><b>Wiztron Hardware Club</b><br>Hands-on hardware and electronics projects, with practical experience in circuit design and troubleshooting.</span></li>
+        </ul>
+      </div>
+      <div>
+        <h2>Education</h2>
+        <ul class="tl">
+          <li><span class="d">Expected 2028</span><span><b>B.Tech, AI & Data Science</b><br>CGPA 7.5 (till 4th semester)</span></li>
+          <li><span class="d">April 2024</span><span><b>12th Standard</b><br>Fame Gurukul Academy, Maksi, Madhya Pradesh. 72.23%</span></li>
+        </ul>
+      </div>
+    </div>
+  </section>
+
+  <section id="contact" class="contact">
+    <h2>Let’s work together</h2>
+    <p>I’m open to internships in machine learning and data analysis.</p>
+    <a class="big" href="mailto:anshumukati90@gmail.com">anshumukati90@gmail.com</a>
+  </section>
+
+  <footer>© 2026 Anshu Mukati · Ujjain, India</footer>
+</div>
+
+<script>
+(function(){
+  var root=document.documentElement;
+  try{var sv=localStorage.getItem('theme');if(sv)root.setAttribute('data-theme',sv)}catch(e){}
+  document.getElementById('tt').addEventListener('click',function(){
+    var dark=root.getAttribute('data-theme')==='dark'||(!root.getAttribute('data-theme')&&matchMedia('(prefers-color-scheme: dark)').matches);
+    var n=dark?'light':'dark';root.setAttribute('data-theme',n);
+    try{localStorage.setItem('theme',n)}catch(e){}
+  });
+})();
+</script>
+</body>
+</html>
